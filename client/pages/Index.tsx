@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 const boothData = {
   "food-beverage": [
     { id: 1, name: "Gourmet Delights", description: "Premium dining experience", booth: "F-01", category: "Restaurant" },
-    { id: 2, name: "Coffee Corner", description: "Artisan coffee & pastries", booth: "F-02", category: "Caf��" },
+    { id: 2, name: "Coffee Corner", description: "Artisan coffee & pastries", booth: "F-02", category: "Café" },
     { id: 3, name: "Fresh Juice Bar", description: "Organic fruit juices", booth: "F-03", category: "Beverages" },
     { id: 4, name: "Pizza Paradise", description: "Wood-fired pizza", booth: "F-04", category: "Fast Food" },
     { id: 5, name: "Sushi Station", description: "Fresh sushi & sashimi", booth: "F-05", category: "Restaurant" },
@@ -107,9 +107,9 @@ const Index = () => {
 
   if (showAnimation) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-8xl font-bold text-luminant-lime animate-pulse mb-4">
+          <div className="text-8xl font-bold text-primary-blue animate-pulse mb-4">
             <span className="inline-block animate-bounce" style={{ animationDelay: "0ms" }}>H</span>
             <span className="inline-block animate-bounce" style={{ animationDelay: "200ms" }}>.</span>
             <span className="inline-block animate-bounce" style={{ animationDelay: "400ms" }}>A</span>
@@ -119,11 +119,11 @@ const Index = () => {
             <span className="inline-block animate-bounce" style={{ animationDelay: "1200ms" }}>E</span>
             <span className="inline-block animate-bounce" style={{ animationDelay: "1400ms" }}>.</span>
           </div>
-          <div className="text-2xl text-lime-400 animate-fade-in">
+          <div className="text-2xl text-blue-700 animate-fade-in">
             Indoor Navigation System
           </div>
           <div className="mt-8">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-luminant-lime mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-blue mx-auto"></div>
           </div>
         </div>
       </div>
@@ -131,22 +131,22 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-lime-400">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="border-b border-lime-900 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <MapPin className="h-8 w-8 text-luminant-lime" />
-              <h1 className="text-3xl font-bold text-luminant-lime">H.A.C.E.</h1>
+              <MapPin className="h-8 w-8 text-primary-blue" />
+              <h1 className="text-3xl font-bold text-primary-blue">H.A.C.E.</h1>
             </div>
             <div className="relative w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-lime-600 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <Input
                 placeholder="Search booths, companies, or categories..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 bg-gray-900 border-lime-800 text-lime-100 placeholder-lime-600 focus:border-luminant-lime"
+                className="pl-10 bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-blue focus:ring-primary-blue"
               />
             </div>
           </div>
@@ -156,10 +156,10 @@ const Index = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-luminant-lime mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Indoor Navigation System
           </h2>
-          <p className="text-xl text-lime-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Discover and navigate through various booths and companies at the H.A.C.E. event. 
             Use the search bar or browse by category.
           </p>
@@ -167,38 +167,38 @@ const Index = () => {
 
         {/* Tabs for Categories */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 bg-gray-900 border border-lime-800">
+          <TabsList className="grid w-full grid-cols-5 bg-white border border-gray-200 shadow-sm">
             <TabsTrigger 
               value="food-beverage" 
-              className="data-[state=active]:bg-luminant-lime data-[state=active]:text-black text-lime-400"
+              className="data-[state=active]:bg-primary-blue data-[state=active]:text-white text-gray-700 hover:text-gray-900"
             >
               <Utensils className="h-4 w-4 mr-2" />
               Food & Beverage
             </TabsTrigger>
             <TabsTrigger 
               value="electricity"
-              className="data-[state=active]:bg-luminant-lime data-[state=active]:text-black text-lime-400"
+              className="data-[state=active]:bg-primary-blue data-[state=active]:text-white text-gray-700 hover:text-gray-900"
             >
               <Zap className="h-4 w-4 mr-2" />
               Electricity
             </TabsTrigger>
             <TabsTrigger 
               value="water"
-              className="data-[state=active]:bg-luminant-lime data-[state=active]:text-black text-lime-400"
+              className="data-[state=active]:bg-primary-blue data-[state=active]:text-white text-gray-700 hover:text-gray-900"
             >
               <Droplets className="h-4 w-4 mr-2" />
               Water
             </TabsTrigger>
             <TabsTrigger 
               value="companies"
-              className="data-[state=active]:bg-luminant-lime data-[state=active]:text-black text-lime-400"
+              className="data-[state=active]:bg-primary-blue data-[state=active]:text-white text-gray-700 hover:text-gray-900"
             >
               <Building className="h-4 w-4 mr-2" />
               Companies
             </TabsTrigger>
             <TabsTrigger 
               value="banking"
-              className="data-[state=active]:bg-luminant-lime data-[state=active]:text-black text-lime-400"
+              className="data-[state=active]:bg-primary-blue data-[state=active]:text-white text-gray-700 hover:text-gray-900"
             >
               <Banknote className="h-4 w-4 mr-2" />
               Banking
@@ -212,35 +212,35 @@ const Index = () => {
             return (
               <TabsContent key={category} value={category} className="mt-8">
                 <div className="flex items-center mb-6">
-                  <Icon className="h-6 w-6 text-luminant-lime mr-3" />
-                  <h3 className="text-2xl font-bold text-luminant-lime capitalize">
+                  <Icon className="h-6 w-6 text-primary-blue mr-3" />
+                  <h3 className="text-2xl font-bold text-gray-900 capitalize">
                     {category.replace("-", " & ")} ({filteredBooths.length} booths)
                   </h3>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {filteredBooths.map((booth) => (
-                    <Card key={booth.id} className="bg-gray-900 border-lime-800 hover:border-luminant-lime transition-colors duration-300 hover:shadow-lg hover:shadow-lime-500/20">
+                    <Card key={booth.id} className="bg-white border-gray-200 hover:border-primary-blue hover:shadow-lg transition-all duration-300 hover:shadow-blue-100">
                       <CardHeader>
                         <div className="flex items-center justify-between">
-                          <Badge variant="outline" className="border-luminant-lime text-luminant-lime">
+                          <Badge variant="outline" className="border-primary-blue text-primary-blue bg-blue-50">
                             {booth.booth}
                           </Badge>
-                          <Store className="h-5 w-5 text-lime-600" />
+                          <Store className="h-5 w-5 text-gray-400" />
                         </div>
-                        <CardTitle className="text-lime-100">{booth.name}</CardTitle>
-                        <CardDescription className="text-lime-400">
+                        <CardTitle className="text-gray-900">{booth.name}</CardTitle>
+                        <CardDescription className="text-gray-600">
                           {booth.description}
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
                         <div className="flex items-center justify-between">
-                          <Badge variant="secondary" className="bg-lime-900 text-lime-200">
+                          <Badge variant="secondary" className="bg-blue-100 text-blue-800 border-blue-200">
                             {booth.category}
                           </Badge>
                           <Button 
                             size="sm" 
-                            className="bg-luminant-lime text-black hover:bg-lime-400"
+                            className="bg-primary-blue text-white hover:bg-blue-700"
                           >
                             View Details
                           </Button>
@@ -253,8 +253,8 @@ const Index = () => {
                 {filteredBooths.length === 0 && (
                   <div className="text-center py-12">
                     <div className="text-6xl mb-4">🔍</div>
-                    <h3 className="text-xl font-semibold text-lime-300 mb-2">No booths found</h3>
-                    <p className="text-lime-500">Try adjusting your search terms or browse other categories.</p>
+                    <h3 className="text-xl font-semibold text-gray-700 mb-2">No booths found</h3>
+                    <p className="text-gray-500">Try adjusting your search terms or browse other categories.</p>
                   </div>
                 )}
               </TabsContent>
@@ -265,33 +265,33 @@ const Index = () => {
         {/* Search Results - Show when searching across all categories */}
         {searchTerm && (
           <div className="mt-12">
-            <h3 className="text-2xl font-bold text-luminant-lime mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Search Results ({getFilteredBooths().length} found)
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {getFilteredBooths().map((booth) => (
-                <Card key={booth.id} className="bg-gray-900 border-lime-800 hover:border-luminant-lime transition-colors duration-300 hover:shadow-lg hover:shadow-lime-500/20">
+                <Card key={booth.id} className="bg-white border-gray-200 hover:border-primary-blue hover:shadow-lg transition-all duration-300 hover:shadow-blue-100">
                   <CardHeader>
                     <div className="flex items-center justify-between">
-                      <Badge variant="outline" className="border-luminant-lime text-luminant-lime">
+                      <Badge variant="outline" className="border-primary-blue text-primary-blue bg-blue-50">
                         {booth.booth}
                       </Badge>
-                      <Store className="h-5 w-5 text-lime-600" />
+                      <Store className="h-5 w-5 text-gray-400" />
                     </div>
-                    <CardTitle className="text-lime-100">{booth.name}</CardTitle>
-                    <CardDescription className="text-lime-400">
+                    <CardTitle className="text-gray-900">{booth.name}</CardTitle>
+                    <CardDescription className="text-gray-600">
                       {booth.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="bg-lime-900 text-lime-200">
+                      <Badge variant="secondary" className="bg-blue-100 text-blue-800 border-blue-200">
                         {booth.category}
                       </Badge>
                       <Button 
                         size="sm" 
-                        className="bg-luminant-lime text-black hover:bg-lime-400"
+                        className="bg-primary-blue text-white hover:bg-blue-700"
                       >
                         View Details
                       </Button>
@@ -305,14 +305,14 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-lime-900 bg-black/50 backdrop-blur-sm mt-16">
+      <footer className="border-t border-gray-200 bg-white/80 backdrop-blur-sm mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <MapPin className="h-6 w-6 text-luminant-lime" />
-              <span className="text-xl font-bold text-luminant-lime">H.A.C.E.</span>
+              <MapPin className="h-6 w-6 text-primary-blue" />
+              <span className="text-xl font-bold text-primary-blue">H.A.C.E.</span>
             </div>
-            <p className="text-lime-400">
+            <p className="text-gray-600">
               Indoor Navigation System - Find your way through the event
             </p>
           </div>
