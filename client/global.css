@@ -107,10 +107,15 @@
 
 @layer utilities {
   .chevron-background {
-    background-image: url('https://cdn.builder.io/o/assets%2F312ec5474d7242fbaaef91d7b594364f%2F3f349862dba146138c99c379e7b395e0?alt=media&token=b2cddcf4-1efa-4dff-9251-84c25312f650&apiKey=312ec5474d7242fbaaef91d7b594364f');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #f8fafc;
+    background-image:
+      linear-gradient(30deg, rgba(255,255,255,0.8) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.8) 87.5%, rgba(255,255,255,0.8)),
+      linear-gradient(150deg, rgba(255,255,255,0.8) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.8) 87.5%, rgba(255,255,255,0.8)),
+      linear-gradient(30deg, rgba(255,255,255,0.4) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.4) 87.5%, rgba(255,255,255,0.4)),
+      linear-gradient(150deg, rgba(255,255,255,0.4) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.4) 87.5%, rgba(255,255,255,0.4)),
+      linear-gradient(60deg, rgba(255,255,255,0.6) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.6) 75%, rgba(255,255,255,0.6)),
+      linear-gradient(60deg, rgba(255,255,255,0.3) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.3) 75%, rgba(255,255,255,0.3));
+    background-size: 120px 120px, 120px 120px, 80px 80px, 80px 80px, 160px 160px, 200px 200px;
+    background-position: 0 0, 60px 60px, 40px 40px, 80px 80px, 20px 20px, 100px 100px;
   }
 }
