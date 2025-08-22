@@ -107,9 +107,10 @@
 
 @layer utilities {
   .chevron-background {
-    background-color: #f1f5f9;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='3' stroke-linejoin='round'%3E%3Cpath d='M30 45l15 15-15 15M60 45l15 15-15 15M90 45l15 15-15 15'/%3E%3Cpath d='M45 30l15 15-15 15M75 30l15 15-15 15M105 30l15 15-15 15'/%3E%3Cpath d='M15 60l15 15-15 15M45 60l15 15-15 15M75 60l15 15-15 15M105 60l15 15-15 15'/%3E%3Cpath d='M30 75l15 15-15 15M60 75l15 15-15 15M90 75l15 15-15 15'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.8'%3E%3Cpath d='M40 40l8 8-8 8-8-8z M70 40l8 8-8 8-8-8z M40 70l8 8-8 8-8-8z M70 70l8 8-8 8-8-8z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 120px 120px;
-    background-repeat: repeat;
+    background-image: url('https://cdn.builder.io/o/assets%2F312ec5474d7242fbaaef91d7b594364f%2F3f349862dba146138c99c379e7b395e0?alt=media&token=b2cddcf4-1efa-4dff-9251-84c25312f650&apiKey=312ec5474d7242fbaaef91d7b594364f');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
