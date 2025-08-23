@@ -388,8 +388,9 @@ const Index = () => {
                       <Button
                         size="sm"
                         className="bg-primary-blue text-white hover:bg-blue-700"
+                        onClick={() => handleNavigateToBoothFromBooth(booth.name)}
                       >
-                        View Details
+                        Get Directions
                       </Button>
                     </div>
                   </CardContent>
