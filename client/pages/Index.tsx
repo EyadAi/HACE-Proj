@@ -417,6 +417,13 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Navigation Map Modal */}
+      <NavigationMap
+        isOpen={mapOpen}
+        onClose={() => setMapOpen(false)}
+        destination={selectedDestination}
+      />
     </div>
   );
 };
