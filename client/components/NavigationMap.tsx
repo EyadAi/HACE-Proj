@@ -29,7 +29,7 @@ const NavigationMap: React.FC<NavigationMapProps> = ({ isOpen, onClose, destinat
       { id: "1", label: "Entrance", x: 1420, y: 800 },
       { id: "2", label: "turn", x: 1420, y: 560 },
       { id: "3", label: "turn", x: 1123, y: 561 },
-      { id: "4", label: "Inter food", x: 1123, y: 800 },
+      { id: "4", label: "Interfood", x: 1123, y: 800 },
       { id: "5", label: "turn", x: 1022, y: 561 },
       { id: "6", label: "Coffee Shop", x: 1020, y: 380 },
       { id: "7", label: "turn", x: 1020, y: 320 },
