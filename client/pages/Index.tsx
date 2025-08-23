@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import NavigationMap from "@/components/NavigationMap";
 
 // H.A.C.E. Event booth data
 const boothData = {
