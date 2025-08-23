@@ -108,6 +108,8 @@ const Index = () => {
   const [showAnimation, setShowAnimation] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTab, setActiveTab] = useState("food-beverage");
+  const [mapOpen, setMapOpen] = useState(false);
+  const [selectedDestination, setSelectedDestination] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
